@@ -1,89 +1,123 @@
 <script setup lang="ts">
-import { RouterView, RouterLink } from 'vue-router'
+import { RouterView, RouterLink } from "vue-router";
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-950 text-slate-50 flex">
+  <div
+    class="min-h-screen bg-slate-950 text-slate-50 flex flex-col md:flex-row font-sans">
     <aside
-      class="hidden md:flex w-64 flex-col border-r border-slate-800 bg-slate-950/80 px-5 py-6 gap-6"
-    >
-      <header class="space-y-3">
-        <p class="text-xs uppercase tracking-[0.3em] text-sky-400/80">Frontend Dev</p>
+      class="hidden md:flex w-72 flex-col border-r border-slate-800 bg-slate-950 px-6 py-8 gap-8 sticky top-0 h-screen">
+      <header class="space-y-4">
+        <div
+          class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 shadow-lg shadow-sky-500/20">
+          <span class="text-white font-bold text-xl">JC</span>
+        </div>
         <div>
-          <h1 class="text-xl font-semibold">Portfolio Dashboard</h1>
-          <p class="text-xs text-slate-400">
-            Mini SPA con Vue 3 + TypeScript + Tailwind CSS.
+          <h1 class="text-lg font-bold tracking-tight">Jose Manuel Campos</h1>
+          <p class="text-xs text-sky-400 font-medium uppercase tracking-widest">
+            Frontend Developer
           </p>
         </div>
       </header>
 
-      <nav class="flex-1 space-y-1 text-sm">
+      <nav class="flex-1 space-y-2 text-sm font-medium">
         <RouterLink
           to="/"
-          class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800/80 hover:text-white transition"
-          active-class="bg-slate-800 text-white"
-        >
+          class="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-400 hover:bg-slate-900 hover:text-sky-400 transition-all duration-300 border border-transparent hover:border-slate-800"
+          active-class="bg-slate-900 text-sky-400 border-slate-800 shadow-inner">
           <span>Inicio</span>
         </RouterLink>
         <RouterLink
           to="/projects"
-          class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800/80 hover:text-white transition"
-          active-class="bg-slate-800 text-white"
-        >
+          class="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-400 hover:bg-slate-900 hover:text-sky-400 transition-all duration-300 border border-transparent hover:border-slate-800"
+          active-class="bg-slate-900 text-sky-400 border-slate-800 shadow-inner">
           <span>Proyectos</span>
         </RouterLink>
         <RouterLink
           to="/skills"
-          class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800/80 hover:text-white transition"
-          active-class="bg-slate-800 text-white"
-        >
+          class="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-400 hover:bg-slate-900 hover:text-sky-400 transition-all duration-300 border border-transparent hover:border-slate-800"
+          active-class="bg-slate-900 text-sky-400 border-slate-800 shadow-inner">
           <span>Skills</span>
         </RouterLink>
         <RouterLink
           to="/about"
-          class="flex items-center gap-2 rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800/80 hover:text-white transition"
-          active-class="bg-slate-800 text-white"
-        >
+          class="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-400 hover:bg-slate-900 hover:text-sky-400 transition-all duration-300 border border-transparent hover:border-slate-800"
+          active-class="bg-slate-900 text-sky-400 border-slate-800 shadow-inner">
           <span>Sobre mí</span>
         </RouterLink>
       </nav>
 
-      <footer class="text-[11px] text-slate-500">
-        Demo orientada a mostrar
-        <span class="text-sky-400">maquetación y componentes frontend</span>.
+      <footer class="pt-6 border-t border-slate-900">
+        <p
+          class="text-[10px] leading-relaxed text-slate-500 uppercase tracking-tighter">
+          Desarrollado con <span class="text-sky-500">Vue 3 & Tailwind</span>
+        </p>
       </footer>
     </aside>
 
-    <main class="flex-1 min-w-0">
-      <header
-        class="md:hidden flex items-center justify-between px-4 py-3 border-b border-slate-800 bg-slate-950/90"
-      >
-        <div>
-          <p class="text-[11px] uppercase tracking-[0.25em] text-sky-400/80">
-            Frontend Dev
-          </p>
-          <h1 class="text-sm font-medium">Portfolio Dashboard</h1>
-        </div>
-        <nav class="flex gap-2 text-[11px]">
-          <RouterLink to="/" class="px-2 py-1 rounded border border-slate-700"
-            >Inicio</RouterLink
-          >
-          <RouterLink to="/projects" class="px-2 py-1 rounded border border-slate-700"
-            >Proyectos</RouterLink
-          >
-          <RouterLink to="/skills" class="px-2 py-1 rounded border border-slate-700"
-            >Skills</RouterLink
-          >
-          <RouterLink to="/about" class="px-2 py-1 rounded border border-slate-700"
-            >Sobre mí</RouterLink
-          >
-        </nav>
-      </header>
+    <header
+      class="md:hidden flex flex-col px-4 py-4 border-b border-slate-800 bg-slate-950/95 backdrop-blur-md sticky top-0 z-50">
+      <div class="flex items-center justify-between mb-4">
+        <h1 class="text-sm font-bold tracking-tight text-white">
+          Jose Manuel <span class="text-sky-400">Campos</span>
+        </h1>
+        <span
+          class="text-[10px] px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 uppercase"
+          >Frontend Dev</span
+        >
+      </div>
 
-      <section class="px-4 md:px-8 py-6 md:py-8 max-w-5xl mx-auto">
+      <nav class="flex justify-between gap-1 overflow-x-auto pb-1 no-scrollbar">
+        <RouterLink
+          to="/"
+          class="px-3 py-2 rounded-lg text-xs font-medium text-slate-400 border border-transparent whitespace-nowrap"
+          active-class="bg-slate-900 text-sky-400 border-slate-800"
+          >Inicio</RouterLink
+        >
+        <RouterLink
+          to="/projects"
+          class="px-3 py-2 rounded-lg text-xs font-medium text-slate-400 border border-transparent whitespace-nowrap"
+          active-class="bg-slate-900 text-sky-400 border-slate-800"
+          >Proyectos</RouterLink
+        >
+        <RouterLink
+          to="/skills"
+          class="px-3 py-2 rounded-lg text-xs font-medium text-slate-400 border border-transparent whitespace-nowrap"
+          active-class="bg-slate-900 text-sky-400 border-slate-800"
+          >Skills</RouterLink
+        >
+        <RouterLink
+          to="/about"
+          class="px-3 py-2 rounded-lg text-xs font-medium text-slate-400 border border-transparent whitespace-nowrap"
+          active-class="bg-slate-900 text-sky-400 border-slate-800"
+          >Sobre mí</RouterLink
+        >
+      </nav>
+    </header>
+
+    <main class="flex-1 min-w-0 bg-slate-950">
+      <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div
+          class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-sky-500/5 blur-[120px] rounded-full"></div>
+        <div
+          class="absolute -bottom-[10%] -right-[10%] w-[30%] h-[30%] bg-blue-600/5 blur-[100px] rounded-full"></div>
+      </div>
+
+      <section
+        class="relative z-10 px-6 md:px-12 py-8 md:py-12 max-w-5xl mx-auto">
         <RouterView />
       </section>
     </main>
   </div>
 </template>
 
+<style>
+/* Quitar barra de scroll en navegación móvil */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>
