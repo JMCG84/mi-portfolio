@@ -43,11 +43,11 @@ const projects: Project[] = [
     title: "CSV Audio-Data Converter",
     subtitle:
       "Herramienta de automatización de datos para ingeniería acústica.",
-    tech: ["HTML5", "Js", "Css", "Vibe Coding"],
+    tech: ["HTML5", "Js", "Css", "Vibe Coding", "Vercel"],
     description:
       "Automatización de datos de medición acústica, de carpeta CSV a un archivo Excel estructurado en segundos.",
-    role: "Proyecto Personal",
-    link: "https://github.com/JMCG84/conversor_archivos",
+    role: "Proyecto Personal para solución real a un familiar",
+    link: "https://conversor-archivos.vercel.app/",
     icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
   },
 ];
@@ -121,8 +121,27 @@ const projects: Project[] = [
 
           <div v-if="project.link" class="pt-2">
             <a
+              v-if="project.id === 4"
               :href="project.link"
               target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white text-xs font-bold shadow-sm hover:from-sky-600 hover:to-indigo-600 transition-all">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-3.5 h-3.5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true">
+                <path d="M5 3v18l15-9L5 3z" />
+              </svg>
+              Abrir demo
+            </a>
+
+            <a
+              v-else
+              :href="project.link"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center text-xs font-bold text-sky-400 hover:text-sky-300 transition-colors">
               Ver repositorio
               <svg
