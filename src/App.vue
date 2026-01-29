@@ -9,8 +9,12 @@ import { RouterView, RouterLink } from "vue-router";
       class="hidden md:flex w-72 flex-col border-r border-slate-800 bg-slate-950 px-6 py-8 gap-8 sticky top-0 h-screen">
       <header class="space-y-4">
         <div
-          class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 shadow-lg shadow-sky-500/20">
-          <span class="text-white font-bold text-xl">JC</span>
+          class="inline-flex relative items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 shadow-lg shadow-sky-500/20 overflow-hidden">
+          <img
+            src="/public/profile.jpg"
+            alt="Foto de Jose Manuel Campos"
+            class="w-full h-full object-cover"
+            onerror="this.style.display = 'none'" />
         </div>
         <div>
           <h1 class="text-lg font-bold tracking-tight">Jose Manuel Campos</h1>
