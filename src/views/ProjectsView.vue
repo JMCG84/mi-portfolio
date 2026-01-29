@@ -43,7 +43,7 @@ const projects: Project[] = [
     title: "CSV Audio-Data Converter",
     subtitle:
       "Herramienta de automatización de datos para ingeniería acústica.",
-    tech: ["HTML5", "Js", "Css", "Vibe Coding", "Vercel"],
+    tech: ["HTML5", "JS", "CSS", "Vibe Coding", "Vercel"],
     description:
       "Automatización de datos de medición acústica, de carpeta CSV a un archivo Excel estructurado en segundos.",
     role: "Proyecto Personal para solución real a un familiar",
