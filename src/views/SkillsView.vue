@@ -114,14 +114,22 @@ const skills: SkillCategory[] = [
         <p class="text-sm text-slate-400 text-center md:text-left">
           ¿Interesado en ver cómo aplico estas herramientas?
           <span class="text-white font-medium"
-            >Echa un vistazo a mis proyectos.</span
+            >Echa un vistazo a mis proyectos o a mis certificaciones
+            academicas.</span
           >
         </p>
-        <RouterLink
-          to="/projects"
-          class="px-5 py-2 bg-white text-slate-950 rounded-lg text-sm font-bold hover:bg-sky-400 transition-colors">
-          Ver Proyectos
-        </RouterLink>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <RouterLink
+            to="/projects"
+            class="px-5 py-2 bg-white text-slate-950 rounded-lg text-sm font-bold hover:bg-sky-400 transition-colors">
+            Ver Proyectos
+          </RouterLink>
+          <RouterLink
+            to="/certifications"
+            class="px-5 py-2 bg-white text-slate-950 rounded-lg text-sm font-bold hover:bg-sky-400 transition-colors">
+            Ver Certificaciones
+          </RouterLink>
+        </div>
       </div>
     </footer>
   </div>
