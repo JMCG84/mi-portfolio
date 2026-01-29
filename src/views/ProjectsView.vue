@@ -2,6 +2,7 @@
 type Project = {
   id: number;
   title: string;
+  subtitle?: string;
   tech: string[];
   description: string;
   role: string;
@@ -35,6 +36,18 @@ const projects: Project[] = [
     description:
       "Construcción de esta Single Page Application (SPA) optimizada para rendimiento, con diseño responsive y despliegue continuo (CI/CD).",
     role: "Proyecto Personal",
+    icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  },
+  {
+    id: 4,
+    title: "CSV Audio-Data Converter",
+    subtitle:
+      "Herramienta de automatización de datos para ingeniería acústica.",
+    tech: ["HTML5", "Js", "Css", "Vibe Coding"],
+    description:
+      "Automatización de datos de medición acústica, de carpeta CSV a un archivo Excel estructurado en segundos.",
+    role: "Proyecto Personal",
+    link: "https://github.com/JMCG84/conversor_archivos",
     icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
   },
 ];
