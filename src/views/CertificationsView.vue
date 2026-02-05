@@ -41,6 +41,14 @@ const certifications: Certification[] = [
     pdfLink: "/public/certificado_php__fundamentos.pdf",
     icon: "M12 6a2 2 0 100-4 2 2 0 000 4zM6 12a2 2 0 100-4 2 2 0 000 4zm0 6a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm0-6a2 2 0 100-4 2 2 0 000 4z",
   },
+  {
+    id: 5,
+    title: "Curso de iniciación al Desarrollo con Inteligencia Artificial",
+    company: "Big School",
+    date: "Febrero 2026",
+    pdfLink: "/public/Desarrollo con IA.pdf",
+    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0m3.879-9.364l-.707.707M9 19.071l-.707-.707m0 0l.707-.707m-.707.707l.707.707",
+  },
 ];
 </script>
 
