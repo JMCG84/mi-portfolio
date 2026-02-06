@@ -15,13 +15,17 @@ const highlightText =
         Interfaces que conectan <br />
         <span
           class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
-          diseño y funcionalidad.
+          Diseño y funcionalidad. Impulsadas con el manejo de la IA.
         </span>
       </h2>
-      <p class="text-base md:text-lg text-slate-400 max-w-2xl leading-relaxed">
+      <p
+        class="text-base md:text-lg text-slate-400 max-w-xl leading-relaxed mt-6 text-left">
         {{ highlightText }}
-        Mi objetivo es transformar ideas complejas en Single Page Applications
-        (SPA) intuitivas, rápidas y totalmente adaptables.
+        "Mi enfoque va más allá del código estático: diseño interfaces dinámicas
+        optimizadas mediante IA-Augmented Development. Utilizo agentes autónomos
+        y herramientas de IA para acelerar el ciclo de desarrollo, garantizar la
+        calidad del software con tests automatizados y crear soluciones web más
+        robustas, eficientes y centradas en el usuario."
       </p>
 
       <div class="flex gap-4 pt-2">
@@ -60,8 +64,12 @@ const highlightText =
         </div>
         <h3 class="font-bold text-white mb-2">Arquitectura SPA</h3>
         <p class="text-sm text-slate-400 leading-relaxed">
-          Navegación fluida y eficiente mediante <strong>Vue Router</strong>,
-          optimizando la carga de recursos y la experiencia de usuario.
+          <strong>Sistemas escalables con Vue 3.</strong> Implementación de
+          arquitecturas modulares y eficientes utilizando<strong>
+            Vue Router y Pinia,</strong
+          >
+          garantizando una navegación fluida y una gestión de estado optimizada
+          para aplicaciones de alto rendimiento.
         </p>
       </article>
 
@@ -84,8 +92,10 @@ const highlightText =
         </div>
         <h3 class="font-bold text-white mb-2">Diseño UI/UX</h3>
         <p class="text-sm text-slate-400 leading-relaxed">
-          Interfaces construidas con <strong>Tailwind CSS</strong> bajo la
-          filosofía <em>Mobile First</em>, garantizando adaptabilidad total.
+          <strong> Interfaces modernas y adaptativas.</strong> Creación de
+          componentes visuales con <strong>Tailwind CSS</strong> bajo la
+          filosofía Mobile First, priorizando la usabilidad y una experiencia de
+          usuario impecable en cualquier dispositivo.
         </p>
       </article>
 
@@ -106,10 +116,12 @@ const highlightText =
               d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
           </svg>
         </div>
-        <h3 class="font-bold text-white mb-2">Código Robusto</h3>
+        <h3 class="font-bold text-white mb-2">IA-Augmented Development</h3>
         <p class="text-sm text-slate-400 leading-relaxed">
-          Uso de <strong>TypeScript</strong> para un desarrollo seguro, con
-          componentes modulares fáciles de mantener y escalar.
+          <strong> Desarrollo potenciado por IA.</strong> Integración de flujos
+          de trabajo con agentes y herramientas de <strong>IA</strong> para la
+          automatización de tests, refactorización inteligente y aceleración del
+          ciclo de entrega de software.
         </p>
       </article>
     </section>
