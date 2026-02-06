@@ -13,13 +13,16 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Desarrollo Frontend en ALTEN",
-    tech: ["Vue 3", "TypeScript", "Tailwind CSS", "Git"],
+    title: "Quizz City",
+    subtitle: "Fullstack Gamified Platform",
+    tech: ["Vue 3", "TypeScript", "Node.js", "Prisma"],
     description:
-      "Participación en el desarrollo de interfaces modernas y mantenimiento de componentes reutilizables bajo estándares profesionales de Clean Code.",
-    role: "Prácticas Profesionales",
-    icon: "M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A10.003 10.003 0 0020 10.332V9.668a10.003 10.003 0 00-14.142-9.336L5.808.388m3.44 2.04a10.003 10.003 0 0110.152 10.152M12 11a1 1 0 110-2 1 1 0 010 2z",
+      "Plataforma de competición sobre geografía española con más de 500 preguntas, sistema de ranking global, temporizador inteligente y panel de administración para gestión de contenido.",
+    role: "Fullstack Developer (Idea original y desarrollo en Alten)",
+    link: "/Videos/quizz-city-demo.mp4",
+    icon: "M12 3L2 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-4zm3.5 6l-4 4-2-2",
   },
+
   {
     id: 2,
     title: "Sistema de Gestión Web (Proyecto DAW)",
@@ -121,7 +124,7 @@ const projects: Project[] = [
 
           <div v-if="project.link" class="pt-2">
             <a
-              v-if="project.id === 4"
+              v-if="project.id === 1 || project.id === 4"
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"
