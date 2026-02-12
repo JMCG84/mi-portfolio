@@ -140,11 +140,19 @@ const certifications: Certification[] = [
             >Explora mis competencias y tecnologías.</span
           >
         </p>
-        <RouterLink
-          to="/skills"
-          class="px-5 py-2 bg-white text-slate-950 rounded-lg text-sm font-bold hover:bg-sky-400 transition-colors">
-          Ver Habilidades
-        </RouterLink>
+        <div class="flex items-center gap-3">
+          <RouterLink
+            to="/skills"
+            class="px-5 py-2 bg-white text-slate-950 rounded-lg text-sm font-bold hover:bg-sky-400 transition-colors">
+            Ver Habilidades
+          </RouterLink>
+
+          <RouterLink
+            to="/"
+            class="px-5 py-2 bg-slate-900 text-slate-200 rounded-lg text-sm font-bold hover:bg-slate-800 transition-colors border border-slate-800">
+            Volver al inicio
+          </RouterLink>
+        </div>
       </div>
     </footer>
   </div>

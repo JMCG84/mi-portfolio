@@ -88,6 +88,13 @@
         <span>Email</span>
       </a>
     </div>
+    <footer class="mt-6">
+      <RouterLink
+        to="/"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-slate-200 hover:bg-slate-800 transition-all border border-slate-800 hover:border-slate-700 font-bold">
+        ← Volver al inicio
+      </RouterLink>
+    </footer>
   </div>
 </template>
 

@@ -190,5 +190,14 @@ const projects: Project[] = [
           class="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       </article>
     </section>
+    <footer class="mt-6">
+      <div class="flex justify-end">
+        <RouterLink
+          to="/"
+          class="px-5 py-2 bg-slate-900 text-slate-200 rounded-lg text-sm font-bold hover:bg-slate-800 transition-colors border border-slate-800">
+          Volver al inicio
+        </RouterLink>
+      </div>
+    </footer>
   </div>
 </template>
