@@ -57,7 +57,7 @@
 
     <div class="flex flex-wrap gap-4 pt-4">
       <a
-        href="/CV_José_Manuel_Campos_García.pdf"
+        href="/Curriculum_JoséManuel_Campos_García.pdf"
         target="_blank"
         class="flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 text-white hover:bg-sky-600 transition-all font-bold shadow-lg shadow-sky-500/20 active:scale-95">
         <svg
