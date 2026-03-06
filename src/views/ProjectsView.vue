@@ -57,6 +57,18 @@ const projects: Project[] = [
     github: "https://github.com/JMCG84/conversor_archivos",
     icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
   },
+  {
+    id: 5,
+    title: "La Gasolinera Mas Barata",
+    subtitle: "Buscador de estaciones de servicio económicas",
+    tech: ["Vue 3", "Vite", "Geolocalización HTML5", "Vanilla CSS"],
+    description:
+      "SPA que ayuda a usuarios a encontrar las estaciones de servicio más económicas dentro de un radio de 20 kilómetros desde su ubicación actual, utilizando datos en tiempo real del Ministerio y la Fórmula de Haversine para cálculos vectoriales.",
+    role: "Proyecto Personal",
+    link: "https://lagasolinamasbarata.vercel.app/",
+    github: "https://github.com/JMCG84/lagasolinamasbarata",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+  },
 ];
 </script>
 
@@ -130,7 +142,7 @@ const projects: Project[] = [
             v-if="project.link || project.github"
             class="pt-2 flex gap-2 flex-wrap">
             <a
-              v-if="project.id === 1 || project.id === 4"
+              v-if="project.id === 1 || project.id === 4 || project.id === 5"
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"
