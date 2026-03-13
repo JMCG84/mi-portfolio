@@ -8,7 +8,7 @@ type SkillCategory = {
 const skills: SkillCategory[] = [
   {
     name: "Core Frontend",
-    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4", // Icono de código </>
+    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
     items: [
       "HTML5 Semántico",
       "CSS3 Moderno",
@@ -18,7 +18,7 @@ const skills: SkillCategory[] = [
   },
   {
     name: "Vue Ecosistema",
-    icon: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5", // Icono capas
+    icon: "M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5",
     items: [
       "Vue 3 (Composition API)",
       "Vue Router",
@@ -28,7 +28,7 @@ const skills: SkillCategory[] = [
   },
   {
     name: "Estilos & UI",
-    icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01", // Icono diseño
+    icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01",
     items: [
       "Tailwind CSS",
       "Diseño Responsive",
@@ -37,13 +37,23 @@ const skills: SkillCategory[] = [
     ],
   },
   {
+    name: "IA & Productividad",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    items: [
+      "Prompt Engineering avanzado",
+      "Integración de APIs de IA",
+      "GitHub Copilot / LLMs",
+      "Automatización de flujos de desarrollo",
+    ],
+  },
+  {
     name: "Tooling & Backend",
-    icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z", // Icono chip/herramientas
+    icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z",
     items: [
       "TypeScript",
       "Git / GitHub",
-      "PHP / MySQL",
-      "Consumo de APIs (Axios)",
+      "MySQL",
+      "Consumo de APIs REST (Axios / Fetch)",
     ],
   },
 ];
@@ -60,10 +70,8 @@ const skills: SkillCategory[] = [
         class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 bg-clip-text text-transparent">
         Habilidades Técnicas
       </h2>
-      <p class="text-lg text-gray-400 max-w-2xl mx-auto">
-        Especializado en el desarrollo de interfaces modernas. Mi enfoque
-        principal es crear aplicaciones rápidas, escalables y visualmente
-        atractivas.
+      <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        Especializado en Vue 3, TypeScript y JavaScript ES6+. Enfocado en arquitecturas escalables, código limpio y experiencias de usuario accesibles.
       </p>
     </header>
 

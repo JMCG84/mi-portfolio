@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-black text-white font-sans overflow-hidden">
+  <div class="min-h-screen bg-black text-white font-sans overflow-x-hidden">
     <!-- Animated Background -->
     <div class="fixed inset-0 z-0">
       <div
@@ -39,7 +39,7 @@
       class="relative z-10 flex justify-between items-center px-6 py-4 bg-black/20 backdrop-blur-lg border-b border-white/10">
       <div class="flex items-center space-x-4">
         <div
-          class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 overflow-hidden">
+          class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] border-2 border-transparent hover:border-blue-400 cursor-pointer">
           <img
             src="/foto_cv.jpg"
             alt="Foto de Jose Manuel Campos"
@@ -120,9 +120,23 @@
     </div>
 
     <!-- Main Content -->
-    <main class="relative z-10 px-6 py-12 max-w-7xl mx-auto">
+    <main class="relative z-10 px-6 pt-10 pb-32 max-w-7xl mx-auto">
       <RouterView />
     </main>
+
+    <!-- Footer Global -->
+    <footer class="fixed bottom-0 left-0 right-0 z-50 px-6 py-4 bg-black/40 backdrop-blur-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
+      <div class="flex items-center space-x-4 mb-2 md:mb-0">
+        <span class="flex items-center text-blue-400">
+          <span class="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
+          Disponible para incorporación inmediata
+        </span>
+      </div>
+      <div class="flex items-center space-x-8">
+        <span class="hidden sm:inline opacity-50">Vue 3 + Vite + TypeScript</span>
+        <span class="text-white tracking-[0.3em]">Jose M Campos</span>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -138,17 +152,13 @@ const toggleMenu = () => {
 </script>
 
 <style>
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+/* Animaciones globales suaves */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 </style>

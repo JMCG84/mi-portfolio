@@ -75,47 +75,58 @@ const certifications: Certification[] = [
 </script>
 
 <template>
-  <div class="space-y-12 py-4">
-    <header class="max-w-3xl space-y-4">
-      <div class="inline-flex items-center px-4 py-1 glass border border-white/20 rounded-full shadow-lg">
-        <span class="text-[9px] font-black uppercase tracking-[0.2em] text-brand-cyan">Certificaciones</span>
+  <div class="space-y-12">
+    <header class="text-center space-y-4">
+      <div
+        class="inline-block px-4 py-2 bg-gray-700/50 border border-gray-600/50 rounded-full text-gray-300 text-sm font-medium">
+        Historial Académico
       </div>
-      <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
-        Certificaciones <span class="text-brand-cyan">Académicas</span>
+      <h2
+        class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 bg-clip-text text-transparent">
+        Certificaciones Académicas
       </h2>
+      <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        Evidencia de mi compromiso con el aprendizaje continuo y mi especialización técnica en el ecosistema de desarrollo moderno.
+      </p>
     </header>
 
-    <!-- Grid compacto para reducir scroll -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <article v-for="cert in certifications" :key="cert.id"
-               class="glass-card group p-6 rounded-[30px] flex flex-col justify-between border border-white/5 hover:border-brand-cyan/30 transition-all">
-        <div class="flex items-start gap-5 mb-6">
-          <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-brand-cyan/10 transition-all shrink-0">
-            <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="cert.icon"></path>
-            </svg>
+               class="group relative bg-gray-800/50 backdrop-blur-lg rounded-3xl p-6 border border-gray-600/50 hover:bg-blue-900/30 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+        
+        <div class="relative z-10 flex flex-col h-full justify-between">
+          <div class="flex items-start gap-5 mb-6">
+            <div class="p-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white group-hover:scale-110 transition-transform shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="cert.icon"></path>
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <h3 class="text-xl font-bold text-gray-200 group-hover:text-blue-300 transition-colors line-clamp-2 uppercase leading-tight">
+                {{ cert.title }}
+              </h3>
+              <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mt-1">{{ cert.company }}</p>
+            </div>
           </div>
-          <div class="min-w-0">
-            <h3 class="text-lg font-black tracking-tight text-white group-hover:text-brand-cyan transition-colors line-clamp-2 uppercase leading-tight">
-              {{ cert.title }}
-            </h3>
-            <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mt-1">{{ cert.company }}</p>
-          </div>
+
+          <a :href="cert.pdfLink" target="_blank"
+             class="relative z-20 w-full py-3 bg-blue-800/50 border border-blue-600/50 text-blue-300 text-center font-bold uppercase tracking-[0.2em] text-xs rounded-xl hover:bg-blue-600 hover:text-white transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
+            Ver Diploma
+          </a>
         </div>
 
-        <a :href="cert.pdfLink" target="_blank"
-           class="w-full py-3 glass border border-white/10 text-white text-center font-black uppercase tracking-[0.2em] text-[9px] rounded-xl hover:bg-brand-cyan hover:text-black transition-all flex items-center justify-center gap-2">
-          Ver Diploma
-        </a>
+        <!-- Efecto de brillo azul -->
+        <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       </article>
     </div>
 
     <div class="flex justify-center pt-8">
-      <RouterLink to="/skills" class="btn-primary flex items-center gap-3 text-gray-500 hover:text-white transition-colors group">
-        <svg class="w-4 h-4 transform group-hover:-translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <RouterLink to="/skills" 
+                 class="px-8 py-4 bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full font-bold hover:from-blue-600 hover:to-blue-500 transition-all transform hover:scale-105 shadow-lg flex items-center gap-3">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
-        <span class="text-xs font-black uppercase tracking-[0.2em]">Volver</span>
+        <span>Volver a Habilidades</span>
       </RouterLink>
     </div>
   </div>
