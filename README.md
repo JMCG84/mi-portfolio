@@ -1,60 +1,56 @@
-# Portfolio Frontend (Vue 3 + TypeScript + Tailwind)
+# Portfolio Profesional - Jose M. Campos
 
-Mini portfolio orientado a **trabajo de frontend**: SPA con Vue 3, TypeScript, Vite y Tailwind CSS, con vistas de Inicio, Proyectos, Skills y Sobre mí.
+Este proyecto es una Single Page Application (SPA) de alto rendimiento diseñada como portfolio profesional para un perfil de Frontend Developer. El diseño se centra en una estética premium con modo oscuro, efectos de glassmorphism y una arquitectura de componentes optimizada.
 
-## Stack
+## Perfil Profesional
 
-- **Framework**: Vue 3
+Desarrollador Frontend especializado en Vue 3 y TypeScript, con formación como Técnico Superior en Desarrollo de Aplicaciones Web (DAW) y experiencia real en consultoría tecnológica (ALTEN Spain). El enfoque principal del proyecto es demostrar la capacidad de crear interfaces escalables, código limpio y la integración de IA generativa en el flujo de desarrollo moderno.
+
+## Tecnologías Utilizadas
+
+- **Framework**: Vue 3 (Composition API)
 - **Lenguaje**: TypeScript
-- **Bundler/Dev server**: Vite
-- **Estilos**: Tailwind CSS (v4)
+- **Estilos**: Tailwind CSS v4
+- **Herramienta de Construcción**: Vite
 - **Enrutado**: Vue Router
+- **Despliegue**: Vercel
 
-## Estructura básica
+## Características Principales
 
-- `src/main.ts`: punto de entrada, monta la app Vue y el router.
-- `src/App.vue`: layout principal tipo dashboard (sidebar / topbar + zona de contenido).
-- `src/router.ts`: definición de las rutas (`/`, `/projects`, `/skills`, `/about`).
-- `src/views/HomeView.vue`: página de inicio con explicación del proyecto.
-- `src/views/ProjectsView.vue`: lista de proyectos frontend (datos simulados, se pueden sustituir por proyectos reales).
-- `src/views/SkillsView.vue`: categorías de skills de frontend.
-- `src/views/AboutView.vue`: texto sobre ti (editable fácilmente).
-- `src/style.css`: entrada de estilos con Tailwind.
+- **Diseño Premium**: Interfaz moderna basada en capas de cristal, gradientes dinámicos y micro-interacciones suaves.
+- **Filosofía Zero-Scroll**: Secciones críticas optimizadas para mostrar la máxima información relevante sin necesidad de deplazamiento vertical excesivo.
+- **IA-Augmented Development**: Flujo de trabajo potenciado por agentes de inteligencia artificial para la generación de componentes y optimización de lógica.
+- **Responsive Design**: Adaptabilidad completa para dispositivos móviles, tablets y monitores de alta resolución.
+- **Gestión de Certificaciones**: Sistema de visualización de diplomas académicos y técnicos integrados.
 
-## Cómo ejecutar el proyecto en local
+## Estructura del Proyecto
 
-```bash
-npm install
-npm run dev
-```
+- `src/views/HomeView.vue`: Página de aterrizaje con propuesta de valor y servicios clave.
+- `src/views/ProjectsView.vue`: Listado de proyectos reales con detalles técnicos y enlaces a demostraciones/repositorios.
+- `src/views/SkillsView.vue`: Desglose detallado de stack tecnológico e integración de IA.
+- `src/views/CertificationsView.vue`: Repositorio de formación académica y especializada.
+- `src/views/AboutView.vue`: Narrativa profesional que detalla el bagaje técnico y la transición de carrera.
+- `src/App.vue`: Contenedor principal con sistema de navegación persistente y footer global de estado.
 
-Después abre en el navegador la URL que muestre Vite (por defecto suele ser `http://localhost:5173` o `http://localhost:5175` si el puerto está ocupado).
+## Configuración Local
 
-## Scripts disponibles
+Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
-- `npm run dev`: arranca el servidor de desarrollo.
-- `npm run build`: genera el build de producción en la carpeta `dist`.
-- `npm run preview`: sirve el build de producción para probarlo en local.
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
 
-## Personalización rápida
+2. Iniciar servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-- **Proyectos**: editar `src/views/ProjectsView.vue` y cambiar el array de proyectos por los tuyos (nombre, descripción, tecnologías, enlaces a GitHub, etc.).
-- **Skills**: editar `src/views/SkillsView.vue` para reflejar tus conocimientos reales.
-- **Sobre mí**: editar `src/views/AboutView.vue` con tu historia y objetivos como frontend developer.
-- **Estilos**: puedes ajustar clases de Tailwind directamente en los templates para cambiar layout/colores según tu gusto.
+3. Construir para producción:
+   ```bash
+   npm run build
+   ```
 
-## Cómo subirlo a GitHub
+## Objetivos del Proyecto
 
-Desde la carpeta `portfolio-frontend`:
-
-```bash
-git init
-git add .
-git commit -m "feat: portfolio frontend con Vue 3, TS y Tailwind"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
-git push -u origin main
-```
-
-Solo tienes que sustituir `TU_USUARIO` y `TU_REPO` por el nombre de tu usuario de GitHub y el nombre del repositorio que crees allí.
-
+Este repositorio no solo sirve como carta de presentación, sino también como ejemplo de buenas prácticas en el ecosistema Vue 3, priorizando el tipado fuerte con TypeScript, la modularización de componentes y la eficiencia en el diseño visual.
