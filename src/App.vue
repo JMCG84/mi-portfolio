@@ -53,22 +53,22 @@
       <nav class="hidden md:flex space-x-8">
         <RouterLink
           to="/"
-          class="text-gray-300 hover:text-blue-300 transition-colors"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           >Inicio</RouterLink
         >
         <RouterLink
           to="/projects"
-          class="text-gray-300 hover:text-blue-300 transition-colors"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           >Proyectos</RouterLink
         >
         <RouterLink
           to="/skills"
-          class="text-gray-300 hover:text-blue-300 transition-colors"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           >Skills</RouterLink
         >
         <RouterLink
           to="/about"
-          class="text-gray-300 hover:text-blue-300 transition-colors"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           >Sobre mí</RouterLink
         >
       </nav>
@@ -94,25 +94,25 @@
       <nav class="flex flex-col space-y-4 p-6">
         <RouterLink
           to="/"
-          class="text-gray-300 hover:text-blue-300 transition-colors"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           @click="toggleMenu"
           >Inicio</RouterLink
         >
         <RouterLink
           to="/projects"
-          class="text-gray-300 hover:text-blue-300 transition-colors"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           @click="toggleMenu"
           >Proyectos</RouterLink
         >
         <RouterLink
           to="/skills"
-          class="text-gray-300 hover:text-blue-300 transition-colors"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           @click="toggleMenu"
           >Skills</RouterLink
         >
         <RouterLink
           to="/about"
-          class="text-gray-300 hover:text-blue-300 transition-colors"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           @click="toggleMenu"
           >Sobre mí</RouterLink
         >
@@ -125,15 +125,19 @@
     </main>
 
     <!-- Footer Global -->
-    <footer class="fixed bottom-0 left-0 right-0 z-50 px-6 py-4 bg-black/40 backdrop-blur-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
+    <footer
+      class="fixed bottom-0 left-0 right-0 z-50 px-6 py-4 bg-black/40 backdrop-blur-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
       <div class="flex items-center space-x-4 mb-2 md:mb-0">
         <span class="flex items-center text-blue-400">
-          <span class="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
+          <span
+            class="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
           Disponible para incorporación inmediata
         </span>
       </div>
       <div class="flex items-center space-x-8">
-        <span class="hidden sm:inline opacity-50">Vue 3 + Vite + TypeScript</span>
+        <span class="hidden sm:inline opacity-50"
+          >Vue 3 + Vite + TypeScript</span
+        >
         <span class="text-white tracking-[0.3em]">Jose M Campos</span>
       </div>
     </footer>
@@ -158,7 +162,13 @@ const toggleMenu = () => {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
