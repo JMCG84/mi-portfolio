@@ -1,129 +1,75 @@
-<script setup lang="ts">
-const highlightText =
-  "Especializado en la creación de interfaces modernas con Vue 3, TypeScript y Tailwind CSS.";
-</script>
-
 <template>
-  <div class="space-y-10">
-    <section class="space-y-4">
-      <div
-        class="inline-flex items-center px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-widest">
-        Disponible para nuevas oportunidades
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="text-center space-y-8 animate-float">
+      <div class="space-y-4">
+        <div class="inline-block px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium">
+          Disponible para nuevas oportunidades
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+          Interfaces que conectan <br />
+          <span class="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 bg-clip-text text-transparent animate-pulse">
+            Diseño y funcionalidad
+          </span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          Especializado en la creación de interfaces modernas con Vue 3, TypeScript y Tailwind CSS.
+          Mi enfoque va más allá del código estático: diseño interfaces dinámicas optimizadas mediante IA-Augmented Development.
+        </p>
       </div>
-      <h2
-        class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-        Interfaces que conectan <br />
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
-          Diseño y funcionalidad. Impulsadas con el manejo de la IA.
-        </span>
-      </h2>
-      <p
-        class="text-base md:text-lg text-slate-400 max-w-xl leading-relaxed mt-6 text-left">
-        {{ highlightText }}
-        "Mi enfoque va más allá del código estático: diseño interfaces dinámicas
-        optimizadas mediante IA-Augmented Development. Utilizo agentes autónomos
-        y herramientas de IA para acelerar el ciclo de desarrollo, garantizar la
-        calidad del software con tests automatizados y crear soluciones web más
-        robustas, eficientes y centradas en el usuario."
-      </p>
 
-      <div class="flex gap-4 pt-2">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <RouterLink
           to="/projects"
-          class="px-6 py-3 bg-white text-slate-950 rounded-xl font-bold hover:bg-sky-400 transition-colors shadow-lg shadow-white/5">
+          class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full font-bold hover:from-blue-500 hover:to-blue-400 transition-all transform hover:scale-105 shadow-lg">
           Explorar Proyectos
         </RouterLink>
         <RouterLink
           to="/about"
-          class="px-6 py-3 bg-slate-900 text-white rounded-xl font-bold border border-slate-800 hover:border-slate-700 transition-colors">
+          class="px-8 py-4 bg-transparent border-2 border-blue-500 text-blue-300 rounded-full font-bold hover:bg-blue-500 hover:text-black transition-all transform hover:scale-105">
           Sobre mí
         </RouterLink>
       </div>
-    </section>
 
-    <section
-      class="grid gap-6 md:grid-cols-3"
-      aria-label="Pilares de mi trabajo">
-      <article
-        class="group p-6 rounded-2xl border border-slate-800 bg-slate-900/40 transition-all duration-500 hover:border-sky-500/40 hover:bg-slate-900/80">
-        <div
-          class="w-10 h-10 mb-4 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+        <div class="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-600/50 hover:bg-blue-900/30 transition-all transform hover:scale-105">
+          <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-200 mb-2">Arquitectura SPA</h3>
+          <p class="text-gray-400">
+            Sistemas escalables con Vue 3. Implementación de arquitecturas modulares y eficientes.
+          </p>
         </div>
-        <h3 class="font-bold text-white mb-2">Arquitectura SPA</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          <strong>Sistemas escalables con Vue 3.</strong> Implementación de
-          arquitecturas modulares y eficientes utilizando<strong>
-            Vue Router y Pinia,</strong
-          >
-          garantizando una navegación fluida y una gestión de estado optimizada
-          para aplicaciones de alto rendimiento.
-        </p>
-      </article>
 
-      <article
-        class="group p-6 rounded-2xl border border-slate-800 bg-slate-900/40 transition-all duration-500 hover:border-sky-500/40 hover:bg-slate-900/80">
-        <div
-          class="w-10 h-10 mb-4 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-          </svg>
+        <div class="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-600/50 hover:bg-blue-900/30 transition-all transform hover:scale-105">
+          <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-200 mb-2">Diseño UI/UX</h3>
+          <p class="text-gray-400">
+            Interfaces modernas y adaptativas. Creación de componentes visuales con Tailwind CSS.
+          </p>
         </div>
-        <h3 class="font-bold text-white mb-2">Diseño UI/UX</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          <strong> Interfaces modernas y adaptativas.</strong> Creación de
-          componentes visuales con <strong>Tailwind CSS</strong> bajo la
-          filosofía Mobile First, priorizando la usabilidad y una experiencia de
-          usuario impecable en cualquier dispositivo.
-        </p>
-      </article>
 
-      <article
-        class="group p-6 rounded-2xl border border-slate-800 bg-slate-900/40 transition-all duration-500 hover:border-sky-500/40 hover:bg-slate-900/80">
-        <div
-          class="w-10 h-10 mb-4 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-          </svg>
+        <div class="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-600/50 hover:bg-blue-900/30 transition-all transform hover:scale-105">
+          <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-200 mb-2">IA-Augmented Development</h3>
+          <p class="text-gray-400">
+            Desarrollo potenciado por IA. Integración de flujos de trabajo con agentes y herramientas de IA.
+          </p>
         </div>
-        <h3 class="font-bold text-white mb-2">IA-Augmented Development</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">
-          <strong> Desarrollo potenciado por IA.</strong> Integración de flujos
-          de trabajo con agentes y herramientas de <strong>IA</strong> para la
-          automatización de tests, refactorización inteligente y aceleración del
-          ciclo de entrega de software.
-        </p>
-      </article>
-    </section>
+      </div>
+    </div>
   </div>
 </template>
+
+<script setup lang="ts">
+</script>

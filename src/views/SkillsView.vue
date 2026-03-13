@@ -50,86 +50,68 @@ const skills: SkillCategory[] = [
 </script>
 
 <template>
-  <div class="space-y-8">
-    <header class="space-y-3">
-      <div
-        class="inline-flex items-center px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-wider">
+  <div class="space-y-12">
+    <header class="text-center space-y-4">
+      <div class="inline-block px-4 py-2 bg-gray-700/50 border border-gray-600/50 rounded-full text-gray-300 text-sm font-medium">
         Tech Stack
       </div>
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
+      <h2 class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 bg-clip-text text-transparent">
         Habilidades Técnicas
       </h2>
-      <p class="text-sm md:text-base text-slate-400 max-w-2xl leading-relaxed">
-        Especializado en el desarrollo de interfaces modernas. Mi enfoque
-        principal es crear aplicaciones rápidas, escalables y visualmente
-        atractivas utilizando las últimas tecnologías.
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+        Especializado en el desarrollo de interfaces modernas. Mi enfoque principal es crear aplicaciones rápidas, escalables y visualmente atractivas.
       </p>
     </header>
 
-    <section
-      class="grid gap-6 sm:grid-cols-2"
-      aria-label="Categorías de skills">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <article
         v-for="category in skills"
         :key="category.name"
-        class="group relative rounded-2xl border border-slate-800 bg-slate-900/40 p-6 transition-all duration-500 hover:border-sky-500/40 hover:bg-slate-900/80 hover:shadow-2xl hover:shadow-sky-500/10 hover:-translate-y-1">
-        <div
-          class="mb-4 inline-flex p-3 rounded-xl bg-slate-950 border border-slate-800 group-hover:border-sky-500/50 group-hover:text-sky-400 transition-colors duration-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              :d="category.icon" />
-          </svg>
+        class="group bg-gray-800/50 backdrop-blur-lg rounded-3xl p-8 border border-gray-600/50 hover:bg-blue-900/30 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+      >
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="p-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-500 text-white group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="category.icon"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-200 group-hover:text-blue-300 transition-colors">
+            {{ category.name }}
+          </h3>
         </div>
 
-        <h3
-          class="text-lg font-bold text-white mb-4 group-hover:text-sky-400 transition-colors">
-          {{ category.name }}
-        </h3>
-
-        <div class="flex flex-wrap gap-2">
+        <div class="grid grid-cols-2 gap-3">
           <span
             v-for="item in category.items"
             :key="item"
-            class="px-3 py-1.5 rounded-lg bg-slate-950 text-slate-400 text-xs border border-slate-800 transition-all duration-300 group-hover:border-slate-700 group-hover:text-slate-200">
+            class="px-4 py-2 rounded-full bg-blue-800/50 text-blue-300 text-sm font-medium border border-blue-600/50 hover:bg-blue-700/50 transition-all transform hover:scale-105"
+          >
             {{ item }}
           </span>
         </div>
 
-        <div
-          class="absolute top-0 right-0 -mr-16 -mt-16 w-32 h-32 bg-sky-500/5 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       </article>
     </section>
 
-    <footer
-      class="rounded-xl bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800 p-6">
-      <div class="flex flex-col md:flex-row items-center gap-4 justify-between">
-        <p class="text-sm text-slate-400 text-center md:text-left">
-          ¿Interesado en ver cómo aplico estas herramientas?
-          <span class="text-white font-medium"
-            >Echa un vistazo a mis proyectos o a mis certificaciones
-            academicas.</span
-          >
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <RouterLink
-            to="/projects"
-            class="px-5 py-2 bg-white text-slate-950 rounded-lg text-sm font-bold hover:bg-sky-400 transition-colors">
-            Ver Proyectos
-          </RouterLink>
-          <RouterLink
-            to="/certifications"
-            class="px-5 py-2 bg-white text-slate-950 rounded-lg text-sm font-bold hover:bg-sky-400 transition-colors">
-            Ver Certificaciones
-          </RouterLink>
-        </div>
+    <footer class="bg-gray-800/50 backdrop-blur-lg rounded-3xl p-8 border border-gray-600/50 text-center">
+      <p class="text-lg text-gray-400 mb-6">
+        ¿Interesado en ver cómo aplico estas herramientas?
+        <span class="text-gray-200 font-bold">Echa un vistazo a mis proyectos o certificaciones.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <RouterLink
+          to="/projects"
+          class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full font-bold hover:from-blue-500 hover:to-blue-400 transition-all transform hover:scale-105"
+        >
+          Ver Proyectos
+        </RouterLink>
+        <RouterLink
+          to="/certifications"
+          class="px-8 py-4 bg-transparent border-2 border-blue-500 text-blue-300 rounded-full font-bold hover:bg-blue-500 hover:text-black transition-all transform hover:scale-105"
+        >
+          Ver Certificaciones
+        </RouterLink>
       </div>
     </footer>
   </div>
