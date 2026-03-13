@@ -3,9 +3,8 @@ type Certification = {
   id: number;
   title: string;
   company: string;
-  date: string;
   pdfLink: string;
-  icon?: string;
+  icon: string;
 };
 
 const certifications: Certification[] = [
@@ -13,15 +12,13 @@ const certifications: Certification[] = [
     id: 1,
     title: "Vue 3 de cero a experto",
     company: "Udemy",
-    date: "Diciembre 2025",
     pdfLink: "/curso vue.js udemy.pdf",
     icon: "M12 2l9.89 18H2.11L12 2z",
   },
   {
     id: 2,
-    title: "Fundamentos de JavaScript",
+    title: "JavaScript Avanzado",
     company: "OpenWebinars",
-    date: "Julio 2025",
     pdfLink: "/certificado_fundamentos_de_javascript.pdf",
     icon: "M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2zm2 6a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm8 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z",
   },
@@ -29,169 +26,97 @@ const certifications: Certification[] = [
     id: 3,
     title: "Fundamentos de Angular",
     company: "OpenWebinars",
-    date: "Julio 2025",
     pdfLink: "/certificado_fundamentos_de_angular.pdf",
-    icon: "M12 2l9 16H3L12 2m0 0v10m0-10L3 18h18L12 2",
+    icon: "M12 2l9 16H3L12 2",
   },
   {
     id: 4,
     title: "PHP: Fundamentos",
     company: "OpenWebinars",
-    date: "Julio 2025",
     pdfLink: "/certificado_php__fundamentos.pdf",
-    icon: "M12 6a2 2 0 100-4 2 2 0 000 4zM6 12a2 2 0 100-4 2 2 0 000 4zm0 6a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm0-6a2 2 0 100-4 2 2 0 000 4z",
+    icon: "M12 6a2 2 0 100-4 2 2 0 000 4zM6 12a2 2 0 100-4 2 2 0 000 4z",
   },
   {
     id: 5,
-    title: "Curso de iniciación al Desarrollo con Inteligencia Artificial",
+    title: "Desarrollo Aumentado por IA",
     company: "Big School",
-    date: "Febrero 2026",
     pdfLink: "/Desarrollo con IA.pdf",
-    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0m3.879-9.364l-.707.707M9 19.071l-.707-.707m0 0l.707-.707m-.707.707l.707.707",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
   {
     id: 6,
     title: "Google IA Esencial",
     company: "Google",
-    date: "Febrero 2026",
     pdfLink: "/Google IA Esencial.pdf",
-    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    icon: "M12 3v1m6.364 1.636l-.707.707M21 12H3",
   },
   {
     id: 7,
-    title: "Google Prompting",
+    title: "Prompting Avanzado",
     company: "Google",
-    date: "Febrero 2026",
-    pdfLink: "/Google_prompting.pdf",
-    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    pdfLink: "/Google _prompting.pdf",
+    icon: "M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3",
   },
   {
     id: 8,
-    title:
-      "Diploma de instalación y configuración de aplicaciones informáticas",
-    company: "Centro Técnico",
-    date: "Enero 2026",
-    pdfLink:
-      "/Diploma de instalacion y configuracion de aplicaciones informaticas.pdf",
-    icon: "M4 6h16M4 12h16M4 18h16",
+    title: "Instalación Aplicaciones",
+    company: "Formación Profesional",
+    pdfLink: "/Diploma de instalacion y configuracion de aplicaciones informaticas.pdf",
+    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5",
   },
   {
     id: 9,
-    title: "Diploma de seguridad en equipos informáticos",
-    company: "Centro Técnico",
-    date: "Enero 2026",
+    title: "Seguridad Informática",
+    company: "Formación Profesional",
     pdfLink: "/Diploma de seguridad en equipos informaticos.pdf",
-    icon: "M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z",
+    icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
   },
 ];
 </script>
 
 <template>
-  <div class="space-y-8">
-    <header class="space-y-3">
-      <div
-        class="inline-flex items-center px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-wider">
-        Certificaciones
+  <div class="space-y-12 py-4">
+    <header class="max-w-3xl space-y-4">
+      <div class="inline-flex items-center px-4 py-1 glass border border-white/20 rounded-full shadow-lg">
+        <span class="text-[9px] font-black uppercase tracking-[0.2em] text-brand-cyan">Certificaciones</span>
       </div>
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
-        Certificaciones Académicas
+      <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight uppercase">
+        Certificaciones <span class="text-brand-cyan">Académicas</span>
       </h2>
-      <p class="text-sm md:text-base text-slate-400 max-w-2xl leading-relaxed">
-        Formación continua y certificaciones en las principales tecnologías y
-        metodologías del desarrollo web moderno.
-      </p>
     </header>
 
-    <section class="space-y-4" aria-label="Listado de certificaciones">
-      <article
-        v-for="cert in certifications"
-        :key="cert.id"
-        class="group relative rounded-2xl border border-slate-800 bg-slate-900/40 p-6 transition-all duration-500 hover:border-sky-500/40 hover:bg-slate-900/80 hover:shadow-2xl hover:shadow-sky-500/10 hover:-translate-y-1">
-        <div
-          class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div class="flex items-start gap-4 flex-1">
-            <div
-              class="p-3 rounded-xl bg-slate-950 border border-slate-800 group-hover:border-sky-500/50 group-hover:text-sky-400 transition-colors duration-500 flex-shrink-0">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  :d="cert.icon" />
-              </svg>
-            </div>
-
-            <div class="flex-1 min-w-0">
-              <h3
-                class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors">
-                {{ cert.title }}
-              </h3>
-              <div
-                class="flex flex-col sm:flex-row sm:items-center gap-2 mt-2 text-sm text-slate-400">
-                <span class="font-medium">{{ cert.company }}</span>
-                <span class="hidden sm:inline text-slate-600">•</span>
-                <span>{{ cert.date }}</span>
-              </div>
-            </div>
-          </div>
-
-          <a
-            :href="cert.pdfLink"
-            download
-            class="px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 text-sm font-bold hover:bg-sky-500/20 hover:border-sky-500/50 transition-all duration-300 flex items-center gap-2 flex-shrink-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 16v-4m0 0V8m0 4h4m-4 0h-4m6-11H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2z" />
+    <!-- Grid compacto para reducir scroll -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article v-for="cert in certifications" :key="cert.id"
+               class="glass-card group p-6 rounded-[30px] flex flex-col justify-between border border-white/5 hover:border-brand-cyan/30 transition-all">
+        <div class="flex items-start gap-5 mb-6">
+          <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-brand-cyan/10 transition-all shrink-0">
+            <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="cert.icon"></path>
             </svg>
-            Descargar PDF
-          </a>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-lg font-black tracking-tight text-white group-hover:text-brand-cyan transition-colors line-clamp-2 uppercase leading-tight">
+              {{ cert.title }}
+            </h3>
+            <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mt-1">{{ cert.company }}</p>
+          </div>
         </div>
 
-        <div
-          class="absolute top-0 right-0 -mr-16 -mt-16 w-32 h-32 bg-sky-500/5 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <a :href="cert.pdfLink" target="_blank"
+           class="w-full py-3 glass border border-white/10 text-white text-center font-black uppercase tracking-[0.2em] text-[9px] rounded-xl hover:bg-brand-cyan hover:text-black transition-all flex items-center justify-center gap-2">
+          Ver Diploma
+        </a>
       </article>
-    </section>
+    </div>
 
-    <footer
-      class="rounded-xl bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800 p-6">
-      <div class="flex flex-col md:flex-row items-center gap-4 justify-between">
-        <p class="text-sm text-slate-400 text-center md:text-left">
-          ¿Quieres conocer más sobre mis habilidades técnicas?
-          <span class="text-white font-medium"
-            >Explora mis competencias y tecnologías.</span
-          >
-        </p>
-        <div class="flex items-center gap-3">
-          <RouterLink
-            to="/skills"
-            class="px-5 py-2 bg-white text-slate-950 rounded-lg text-sm font-bold hover:bg-sky-400 transition-colors">
-            Ver Habilidades
-          </RouterLink>
-
-          <RouterLink
-            to="/"
-            class="px-5 py-2 bg-slate-900 text-slate-200 rounded-lg text-sm font-bold hover:bg-slate-800 transition-colors border border-slate-800">
-            Volver al inicio
-          </RouterLink>
-        </div>
-      </div>
-    </footer>
+    <div class="flex justify-center pt-8">
+      <RouterLink to="/skills" class="btn-primary flex items-center gap-3 text-gray-500 hover:text-white transition-colors group">
+        <svg class="w-4 h-4 transform group-hover:-translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span class="text-xs font-black uppercase tracking-[0.2em]">Volver</span>
+      </RouterLink>
+    </div>
   </div>
 </template>
-
-<style scoped>
-/* Estilos adicionales si es necesario */
-</style>
