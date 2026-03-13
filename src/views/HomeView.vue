@@ -1,64 +1,114 @@
 <template>
-  <div class="h-[calc(100vh-280px)] min-h-[450px] flex flex-col items-center justify-center overflow-hidden">
-    <!-- Hero Section Ultra-Compacto - Diseñado para Carga Instantánea -->
-    <section class="max-w-4xl w-full text-center space-y-4 md:space-y-6 animate-fade-in px-4">
-      <div class="flex flex-col items-center space-y-4 md:space-y-6">
-        
-        <!-- Badge de Disponibilidad Mini -->
-        <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 glass border border-white/20 rounded-full shadow-lg">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-cyan shadow-[0_0_8px_#06b6d4]"></span>
-          </span>
-          <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.2em] text-brand-cyan">Disponible para proyectos</span>
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="text-center space-y-8 animate-float">
+      <div class="space-y-4">
+        <div
+          class="inline-block px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium">
+          Disponible para nuevas oportunidades
         </div>
-        
-        <!-- Bio Principal Central -->
-        <div class="space-y-3 md:space-y-4">
-          <h1 class="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[1.1] uppercase tracking-tighter">
-            Frontend <span class="text-brand-cyan">Developer</span> <br class="hidden md:block" />
-            <span class="text-brand-violet">Vue 3</span> & <span class="text-white">TypeScript</span>
-          </h1>
-          <p class="text-sm md:text-lg text-gray-400 max-w-lg mx-auto leading-relaxed font-light">
-            Especializado en interfaces <span class="text-white font-bold">pixel-perfect</span> y arquitecturas escalables de alto rendimiento.
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+          Interfaces que conectan <br />
+          <span
+            class="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-100 bg-clip-text text-transparent animate-pulse">
+            Diseño y funcionalidad
+          </span>
+        </h1>
+        <p
+          class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          Especializado en la creación de interfaces modernas con Vue 3,
+          TypeScript y Tailwind CSS. Mi enfoque va más allá del código estático:
+          diseño interfaces dinámicas optimizadas mediante IA-Augmented
+          Development.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <RouterLink
+          to="/projects"
+          class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full font-bold hover:from-blue-500 hover:to-blue-400 transition-all transform hover:scale-105 shadow-lg">
+          Explorar Proyectos
+        </RouterLink>
+        <RouterLink
+          to="/about"
+          class="px-8 py-4 bg-transparent border-2 border-blue-500 text-blue-300 rounded-full font-bold hover:bg-blue-500 hover:text-black transition-all transform hover:scale-105">
+          Sobre mí
+        </RouterLink>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+        <div
+          class="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-600/50 hover:bg-blue-900/30 transition-all transform hover:scale-105">
+          <div
+            class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <svg
+              class="w-6 h-6 text-gray-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-200 mb-2">Arquitectura SPA</h3>
+          <p class="text-gray-400">
+            Sistemas escalables con Vue 3. Implementación de arquitecturas
+            modulares y eficientes.
           </p>
         </div>
 
-        <!-- Botones de Acción -->
-        <div class="flex flex-row gap-4 justify-center pt-2">
-          <RouterLink to="/projects" 
-            class="btn-primary group px-8 md:px-10 py-3.5 md:py-4 bg-white text-black font-black rounded-2xl transition-all uppercase tracking-widest text-[10px] md:text-xs hover:scale-105 shadow-xl">
-            Proyectos
-          </RouterLink>
-          <RouterLink to="/about" 
-            class="btn-primary px-8 md:px-10 py-3.5 md:py-4 glass border border-white/20 text-white font-black rounded-2xl hover:bg-white/5 transition-all uppercase tracking-widest text-[10px] md:text-xs">
-            Sobre mí
-          </RouterLink>
+        <div
+          class="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-600/50 hover:bg-blue-900/30 transition-all transform hover:scale-105">
+          <div
+            class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <svg
+              class="w-6 h-6 text-gray-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-200 mb-2">Diseño UI/UX</h3>
+          <p class="text-gray-400">
+            Interfaces modernas y adaptativas. Creación de componentes visuales
+            con Tailwind CSS.
+          </p>
         </div>
 
-        <!-- Tech Tags Discretos -->
-        <div class="flex flex-wrap gap-2 pt-4 md:pt-6 justify-center opacity-40">
-          <div v-for="tech in ['Vite', 'Tailwind', 'Pinia', 'Git', 'GenAI']" :key="tech"
-               class="px-2.5 py-1 text-[7px] md:text-[8px] font-black uppercase tracking-[0.15em] text-gray-300 border border-white/10 rounded-full glass">
-            {{ tech }}
+        <div
+          class="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-600/50 hover:bg-blue-900/30 transition-all transform hover:scale-105">
+          <div
+            class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
           </div>
+          <h3 class="text-xl font-bold text-gray-200 mb-2">
+            IA-Augmented Development
+          </h3>
+          <p class="text-gray-400">
+            Desarrollo potenciado por IA. Integración de flujos de trabajo con
+            agentes y herramientas de IA.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
-<script setup lang="ts">
-// Vista optimizada para 0 scroll y máxima velocidad de lectura
-</script>
-
-<style scoped>
-.animate-fade-in {
-  animation: fadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-</style>
+<script setup lang="ts"></script>
