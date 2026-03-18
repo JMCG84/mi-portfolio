@@ -168,6 +168,7 @@ const projects: Project[] = [
             <a
               v-if="
                 project.id !== 1 &&
+                project.id !== 2 &&
                 project.id !== 3 &&
                 project.id !== 4 &&
                 project.id !== 5 &&
