@@ -33,6 +33,7 @@ const projects: Project[] = [
     description:
       "Plataforma integral de gestión para clínicas de fisioterapia, migrada a Vue 3 desde su versión legacy en PHP. Proyecto Final de Grado Superior transformado con asistencia de IA, incluyendo gestión de pacientes, reservas, historiales clínicos y panel administrativo con API desacoplada.",
     role: "Proyecto Final de Grado Superior",
+    link: "/Videos/fisioplenium-demo.mp4",
     github: "https://github.com/JMCG84/Fisio_plenium",
     icon: "M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z",
   },
@@ -143,6 +144,7 @@ const projects: Project[] = [
             <a
               v-if="
                 project.id === 1 ||
+                project.id === 2 ||
                 project.id === 3 ||
                 project.id === 4 ||
                 project.id === 5
