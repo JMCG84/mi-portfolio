@@ -27,13 +27,14 @@ const projects: Project[] = [
 
   {
     id: 2,
-    title: "Sistema de Gestión Web (Proyecto DAW)",
-    tech: ["PHP", "MySQL", "JavaScript", "CSS3"],
+    title: "Fisio Plenium",
+    subtitle: "Sistema de Gestión de Clínica de Fisioterapia",
+    tech: ["Vue 3", "TypeScript", "PHP 8", "MySQL"],
     description:
-      "Desarrollo integral de una aplicación web con arquitectura cliente-servidor, manejo de bases de datos relacionales y autenticación de usuarios.",
-    role: "Desarrollo Fullstack",
-    github: "https://github.com/JMCG84",
-    icon: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4",
+      "Plataforma integral de gestión para clínicas de fisioterapia, migrada a Vue 3 desde su versión legacy en PHP. Proyecto Final de Grado Superior transformado con asistencia de IA, incluyendo gestión de pacientes, reservas, historiales clínicos y panel administrativo con API desacoplada.",
+    role: "Proyecto Final de Grado Superior",
+    github: "https://github.com/JMCG84/Fisio_plenium",
+    icon: "M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z",
   },
   {
     id: 3,
@@ -140,7 +141,12 @@ const projects: Project[] = [
 
           <div v-if="project.link || project.github" class="flex gap-3 pt-4">
             <a
-              v-if="project.id === 1 || project.id === 4 || project.id === 5"
+              v-if="
+                project.id === 1 ||
+                project.id === 3 ||
+                project.id === 4 ||
+                project.id === 5
+              "
               :href="project.link"
               target="_blank"
               rel="noopener noreferrer"
