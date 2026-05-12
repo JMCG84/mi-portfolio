@@ -17,14 +17,17 @@
         <article class="bg-gray-800/50 backdrop-blur-lg rounded-[32px] p-8 border border-gray-600/50 hover:bg-blue-900/30 transition-all duration-500 group relative overflow-hidden">
           <div class="relative z-10 space-y-6">
             <p class="text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
-              Soy <span class="text-blue-400">Frontend Developer</span> especializado en Vue 3, TypeScript y JavaScript ES6+. Me formé como Técnico Superior en Desarrollo de Aplicaciones Web y adquirí experiencia real en <span class="text-white font-bold">ALTEN Spain</span>, donde desarrollé interfaces escalables, componentes reutilizables y lógica de negocio con tipado estricto en entorno de consultoría tecnológica.
+              Soy un profesional tecnológico enfocado en la eficiencia operativa, la seguridad y el desarrollo de soluciones escalables. Mi trayectoria combina la precisión técnica del desarrollo con una sólida capacidad de gestión de procesos IT. Actualmente, desempeño mi labor como Técnico de Administración de Jira Service Management en <span class="text-white font-bold">Telefónica Tech</span>, participando en proyectos críticos de Ciberseguridad.
             </p>
             <div class="space-y-4 text-gray-400 leading-relaxed text-base italic">
               <p>
-                Antes de dedicarme al desarrollo pasé 16 años como fisioterapeuta. Esa etapa me dio algo que no se aprende en ningún curso: <span class="text-gray-300">escucha activa, análisis de necesidades reales del usuario y capacidad de trabajar bajo presión</span> manteniendo la calidad. Hoy lo aplico directamente a cómo construyo interfaces y colaboro en equipo.
+                Cuento con una base técnica sólida como Técnico Superior en Desarrollo de Aplicaciones Web, habiendo consolidado mi experiencia previa en consultoría tecnológica mediante el uso de <span class="text-gray-300">Vue 3 y TypeScript</span>. En mi compromiso con la especialización constante, actualmente compagino mi actividad profesional con una doble formación de alto nivel: el desarrollo en el ecosistema SAP BTP (ABAP Cloud / RAP) y la Certificación Profesional en Ciberseguridad de Google.
               </p>
               <p>
-                Integro <span class="text-blue-300 font-medium">IA generativa</span> en mi flujo de trabajo diario — generación de componentes, detección de bugs, documentación técnica — y sigo formándome de forma continua. Busco un equipo donde pueda aportar desde el primer día y seguir creciendo.
+                Antes de mi transición al sector IT, dediqué 16 años a la fisioterapia. Esta etapa me dotó de competencias transversales que hoy son mi mayor activo en tecnología: una <span class="text-gray-300">escucha activa excepcional para entender las necesidades de negocio, capacidad analítica bajo presión y una orientación total hacia la resolución de problemas complejos</span>.
+              </p>
+              <p>
+                Integro <span class="text-blue-300 font-medium">IA generativa</span> en mi flujo de trabajo para optimizar la calidad del código, la automatización de procesos y la documentación técnica. Mi objetivo es aportar valor en entornos donde la innovación, la seguridad y la robustez de los sistemas son la máxima prioridad.
               </p>
             </div>
           </div>

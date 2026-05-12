@@ -47,7 +47,7 @@
         </div>
         <h1
           class="text-xl font-bold bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text text-transparent">
-          Jose Manuel Campos
+          Jose Manuel Campos García
         </h1>
       </div>
       <nav class="hidden md:flex space-x-8">
@@ -57,9 +57,19 @@
           >Inicio</RouterLink
         >
         <RouterLink
+          to="/experience"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
+          >Experiencia</RouterLink
+        >
+        <RouterLink
           to="/projects"
           class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           >Proyectos</RouterLink
+        >
+        <RouterLink
+          to="/certifications"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
+          >Certificaciones</RouterLink
         >
         <RouterLink
           to="/skills"
@@ -99,10 +109,22 @@
           >Inicio</RouterLink
         >
         <RouterLink
+          to="/experience"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
+          @click="toggleMenu"
+          >Experiencia</RouterLink
+        >
+        <RouterLink
           to="/projects"
           class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
           @click="toggleMenu"
           >Proyectos</RouterLink
+        >
+        <RouterLink
+          to="/certifications"
+          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
+          @click="toggleMenu"
+          >Certificaciones</RouterLink
         >
         <RouterLink
           to="/skills"
@@ -126,17 +148,10 @@
 
     <!-- Footer Global -->
     <footer
-      class="fixed bottom-0 left-0 right-0 z-50 px-6 py-4 bg-black/40 backdrop-blur-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
-      <div class="flex items-center space-x-4 mb-2 md:mb-0">
-        <span class="flex items-center text-blue-400">
-          <span
-            class="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
-          Disponible para incorporación inmediata
-        </span>
-      </div>
-      <div class="flex items-center space-x-8">
+      class="fixed bottom-0 left-0 right-0 z-50 px-6 py-4 bg-black/40 backdrop-blur-md border-t border-white/5 flex justify-center items-center text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
+      <div class="flex flex-col items-center justify-center text-center gap-1">
         <span class="hidden sm:inline opacity-50"
-          >Vue 3 + Vite + TypeScript</span
+          >JIRA · Ciberseguridad · IA Developer</span
         >
         <span class="text-white tracking-[0.3em]">Jose M Campos</span>
       </div>

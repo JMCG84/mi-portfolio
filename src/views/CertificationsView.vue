@@ -3,11 +3,40 @@ type Certification = {
   id: number;
   title: string;
   company: string;
-  pdfLink: string;
+  pdfLink?: string;
   icon: string;
+  description?: string;
+  inProgress?: boolean;
 };
 
 const certifications: Certification[] = [
+  {
+    id: 12,
+    title: "Certificado Profesional de Ciberseguridad de Google",
+    company: "Google | En curso",
+    description:
+      "Especializacion compuesta por 9 modulos tecnicos enfocados en la proteccion de infraestructuras criticas, analisis de vulnerabilidades y automatizacion de respuestas ante amenazas mediante Python.",
+    inProgress: true,
+    icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+  },
+  {
+    id: 13,
+    title: "Especializacion en Desarrollo SAP ABAP Cloud",
+    company: "Experis Espana | En curso",
+    description:
+      "Programa intensivo enfocado en las nuevas arquitecturas de SAP dentro del entorno Business Technology Platform (BTP). Especializacion en el modelo de programacion RESTful ABAP (RAP), creacion de servicios OData, Core Data Services (CDS) y extensibilidad en la nube. Desarrollo de logica de negocio moderna orientada a objetos para soluciones empresariales escalables.",
+    inProgress: true,
+    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+  },
+  {
+    id: 6,
+    title: "Google IA Esencial",
+    company: "Google",
+    pdfLink: "/Google IA Esencial.pdf",
+    description:
+      "Especializacion compuesta por 5 cursos orientados al uso practico de IA generativa, productividad asistida y aplicacion de herramientas de IA en entornos profesionales.",
+    icon: "M12 3v1m6.364 1.636l-.707.707M21 12H3",
+  },
   {
     id: 1,
     title: "Vue 3 de cero a experto",
@@ -42,13 +71,6 @@ const certifications: Certification[] = [
     company: "Big School",
     pdfLink: "/Desarrollo con IA.pdf",
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
-  },
-  {
-    id: 6,
-    title: "Google IA Esencial",
-    company: "Google",
-    pdfLink: "/Google IA Esencial.pdf",
-    icon: "M12 3v1m6.364 1.636l-.707.707M21 12H3",
   },
   {
     id: 7,
@@ -120,13 +142,20 @@ const certifications: Certification[] = [
                 {{ cert.title }}
               </h3>
               <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mt-1">{{ cert.company }}</p>
+              <p v-if="cert.description" class="text-sm text-gray-400 leading-relaxed mt-3 normal-case">
+                {{ cert.description }}
+              </p>
             </div>
           </div>
 
-          <a :href="cert.pdfLink" target="_blank"
+          <a v-if="cert.pdfLink" :href="cert.pdfLink" target="_blank"
              class="relative z-20 w-full py-3 bg-blue-800/50 border border-blue-600/50 text-blue-300 text-center font-bold uppercase tracking-[0.2em] text-xs rounded-xl hover:bg-blue-600 hover:text-white transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
             Ver Diploma
           </a>
+          <span v-else
+                class="relative z-20 w-full py-3 bg-gray-700/50 border border-gray-600/50 text-gray-300 text-center font-bold uppercase tracking-[0.2em] text-xs rounded-xl flex items-center justify-center gap-2">
+            En curso
+          </span>
         </div>
 
         <!-- Efecto de brillo azul -->

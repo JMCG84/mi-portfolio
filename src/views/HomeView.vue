@@ -7,24 +7,20 @@
       <div class="space-y-6">
         <div
           class="inline-block px-5 py-2 bg-blue-500/10 border border-blue-400/20 rounded-full text-blue-300 text-xs md:text-sm font-bold uppercase tracking-[0.2em]">
-          Disponible para nuevas oportunidades
+          Explorando tecnologías
         </div>
 
         <h1
           class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tighter uppercase text-white">
-          Interfaces que conectan <br />
-          <span
-            class="bg-gradient-to-r from-blue-400 via-blue-200 to-white bg-clip-text text-transparent">
-            Diseño y funcionalidad
-          </span>
+          Soluciones que integran <br />
+          Gestión Operativa, Desarrollo e IA
         </h1>
 
         <p
           class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light mt-6">
-          Desarrollador Frontend especializado en
-          <span class="text-white font-bold">Vue 3 y TypeScript</span>, con
-          experiencia real en consultoría tecnológica e integración de IA en el
-          flujo de desarrollo.
+          Especialista en Administración de Jira Service Management en entornos
+          de Ciberseguridad y AI Developer. Enfocado en la optimización de
+          procesos IT y la creación de soluciones tecnológicas escalables.
         </p>
       </div>
 

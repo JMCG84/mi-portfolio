@@ -7,6 +7,27 @@ type SkillCategory = {
 
 const skills: SkillCategory[] = [
   {
+    name: "Cybersecurity & Compliance",
+    icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+    items: [
+      "Gestión de Riesgos y Activos",
+      "Detección y Respuesta ante incidentes",
+      "Seguridad de Redes",
+      "Linux y SQL para Seguridad",
+      "Automatización con Python",
+    ],
+  },
+  {
+    name: "IA & Productividad",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    items: [
+      "Prompt Engineering avanzado",
+      "Integración de APIs de IA",
+      "GitHub Copilot / LLMs",
+      "Automatización de flujos de desarrollo",
+    ],
+  },
+  {
     name: "Core Frontend",
     icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
     items: [
@@ -37,16 +58,6 @@ const skills: SkillCategory[] = [
     ],
   },
   {
-    name: "IA & Productividad",
-    icon: "M13 10V3L4 14h7v7l9-11h-7z",
-    items: [
-      "Prompt Engineering avanzado",
-      "Integración de APIs de IA",
-      "GitHub Copilot / LLMs",
-      "Automatización de flujos de desarrollo",
-    ],
-  },
-  {
     name: "Tooling & Backend",
     icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z",
     items: [
@@ -71,7 +82,7 @@ const skills: SkillCategory[] = [
         Habilidades Técnicas
       </h2>
       <p class="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-        Especializado en Vue 3, TypeScript y JavaScript ES6+. Enfocado en arquitecturas escalables, código limpio y experiencias de usuario accesibles.
+        Enfocado en Ciberseguridad, administración de Jira Service Management e integración de IA para optimizar procesos IT y construir soluciones tecnológicas seguras y escalables.
       </p>
     </header>
 

@@ -4,6 +4,7 @@ import ProjectsView from "./views/ProjectsView.vue";
 import SkillsView from "./views/SkillsView.vue";
 import AboutView from "./views/AboutView.vue";
 import CertificationsView from "./views/CertificationsView.vue";
+import ExperienceView from "./views/ExperienceView.vue";
 
 const routes = [
   { path: "/", name: "home", component: HomeView },
@@ -14,6 +15,7 @@ const routes = [
     name: "certifications",
     component: CertificationsView,
   },
+  { path: "/experience", name: "experience", component: ExperienceView },
   { path: "/about", name: "about", component: AboutView },
 ];
 
