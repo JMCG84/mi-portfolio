@@ -61,7 +61,7 @@
             Arquitectura
           </h3>
           <p class="text-xs text-gray-500 leading-relaxed italic">
-            Sistemas escalables y modulares con Vue 3.
+            Administración de Jira Service Management, diseño de workflows
           </p>
         </div>
 
@@ -83,10 +83,11 @@
           </div>
           <h3
             class="text-sm font-black text-white uppercase tracking-[0.2em] mb-2">
-            Diseño UI/UX
+            Ciberseguridad Operativa
           </h3>
           <p class="text-xs text-gray-500 leading-relaxed italic">
-            Interfaces adaptativas con Tailwind CSS.
+            
+          Soporte técnico en entornos de seguridad corporativa. Gestión de tickets, trazabilidad y respuesta a incidencias
           </p>
         </div>
 
@@ -111,7 +112,7 @@
             IA Workflow
           </h3>
           <p class="text-xs text-gray-500 leading-relaxed italic">
-            Desarrollo potenciado por agentes de IA.
+           Integración de IA en flujos de trabajo. Automatización y Prompt Engineering aplicado a procesos IT
           </p>
         </div>
       </div>
