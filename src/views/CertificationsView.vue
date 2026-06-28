@@ -202,7 +202,7 @@ const sortedCertifications = computed(() => {
               </p>
               <p
                 v-if="cert.description"
-                class="text-sm text-gray-400 leading-relaxed mt-3 normal-case line-clamp-4">
+                class="text-sm text-gray-400 leading-relaxed mt-3 normal-case whitespace-normal break-words">
                 {{ cert.description }}
               </p>
             </div>
