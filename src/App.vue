@@ -1,159 +1,76 @@
 <template>
-  <div class="min-h-screen bg-black text-white font-sans overflow-x-hidden">
-    <!-- Animated Background -->
-    <div class="fixed inset-0 z-0">
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-900 to-black"></div>
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(139,92,246,0.1),transparent_50%)]"></div>
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.05),transparent_50%)]"></div>
-      <!-- Subtle frontend elements -->
-      <div class="absolute top-1/4 left-1/4 text-gray-700 text-6xl opacity-10">
-        &lt;/&gt;
-      </div>
-      <div
-        class="absolute bottom-1/4 right-1/4 text-gray-700 text-4xl opacity-10">
-        { }
-      </div>
-      <div class="absolute top-1/2 left-1/2 text-gray-700 text-5xl opacity-5">
-        &lt;div&gt;
-      </div>
-      <div class="absolute top-3/4 left-1/4 text-gray-700 text-3xl opacity-10">
-        &lt;script&gt;
-      </div>
-      <div class="absolute top-1/3 right-1/3 text-blue-600 text-2xl opacity-15">
-        function()
-      </div>
-      <div
-        class="absolute bottom-1/3 left-1/3 text-blue-600 text-4xl opacity-10">
-        .class
-      </div>
-      <div class="absolute top-2/3 right-1/4 text-gray-600 text-3xl opacity-8">
-        #id
-      </div>
-    </div>
+  <div class="portfolio-shell min-h-screen overflow-x-hidden">
+    <div class="portfolio-background" aria-hidden="true"></div>
 
-    <!-- Header -->
-    <header
-      class="relative z-10 flex justify-between items-center px-6 py-4 bg-black/20 backdrop-blur-lg border-b border-white/10">
-      <div class="flex items-center space-x-4">
-        <div
-          class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 overflow-hidden transition-all duration-300 hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] border-2 border-transparent hover:border-blue-400 cursor-pointer">
-          <img
-            src="/foto_cv.jpg"
-            alt="Foto de Jose Manuel Campos"
-            class="w-full h-full object-cover" />
-        </div>
-        <h1
-          class="text-xl font-bold bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text text-transparent">
-          Jose Manuel Campos García
-        </h1>
-      </div>
-      <nav class="hidden md:flex space-x-8">
+    <header class="site-header relative z-10">
+      <div class="site-header-inner">
         <RouterLink
           to="/"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          >Inicio</RouterLink
-        >
-        <RouterLink
-          to="/experience"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          >Experiencia</RouterLink
-        >
-        <RouterLink
-          to="/projects"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          >Proyectos</RouterLink
-        >
-        <RouterLink
-          to="/certifications"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          >Certificaciones</RouterLink
-        >
-        <RouterLink
-          to="/skills"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          >Skills</RouterLink
-        >
-        <RouterLink
-          to="/about"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          >Sobre mí</RouterLink
-        >
-      </nav>
-      <button class="md:hidden text-gray-300" @click="toggleMenu">
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+          class="site-brand"
+          aria-label="Jose Manuel Campos, inicio">
+          <img src="/profile.jpg" alt="" class="site-brand-photo" />
+          <span class="site-brand-name">Jose Manuel Campos</span>
+        </RouterLink>
+
+        <nav class="site-nav hidden md:flex" aria-label="Navegación principal">
+          <RouterLink
+            v-for="item in navItems"
+            :key="item.to"
+            :to="item.to"
+            class="site-nav-link">
+            {{ item.label }}
+          </RouterLink>
+        </nav>
+
+        <button
+          class="menu-toggle md:hidden"
+          type="button"
+          :aria-label="menuOpen ? 'Cerrar navegación' : 'Abrir navegación'"
+          :aria-expanded="menuOpen"
+          aria-controls="mobile-navigation"
+          @click="toggleMenu">
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.8"
+              :d="
+                menuOpen ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h16'
+              " />
+          </svg>
+        </button>
+      </div>
     </header>
 
-    <!-- Mobile Menu -->
     <div
       v-if="menuOpen"
-      class="relative z-10 md:hidden bg-gray-900/90 backdrop-blur-lg">
-      <nav class="flex flex-col space-y-4 p-6">
+      id="mobile-navigation"
+      class="mobile-nav relative z-10 md:hidden">
+      <nav class="mobile-nav-list" aria-label="Navegación móvil">
         <RouterLink
-          to="/"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          @click="toggleMenu"
-          >Inicio</RouterLink
-        >
-        <RouterLink
-          to="/experience"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          @click="toggleMenu"
-          >Experiencia</RouterLink
-        >
-        <RouterLink
-          to="/projects"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          @click="toggleMenu"
-          >Proyectos</RouterLink
-        >
-        <RouterLink
-          to="/certifications"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          @click="toggleMenu"
-          >Certificaciones</RouterLink
-        >
-        <RouterLink
-          to="/skills"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          @click="toggleMenu"
-          >Skills</RouterLink
-        >
-        <RouterLink
-          to="/about"
-          class="inline-block text-gray-300 hover:text-blue-300 hover:underline hover:scale-125 hover:shadow-[0_0_20px_rgba(59,130,246,0.8)] transition-all"
-          @click="toggleMenu"
-          >Sobre mí</RouterLink
-        >
+          v-for="item in navItems"
+          :key="item.to"
+          :to="item.to"
+          class="site-nav-link"
+          @click="toggleMenu">
+          {{ item.label }}
+        </RouterLink>
       </nav>
     </div>
 
-    <!-- Main Content -->
-    <main class="relative z-10 px-6 pt-10 pb-32 max-w-7xl mx-auto">
+    <main class="site-main relative z-10">
       <RouterView />
     </main>
 
-    <!-- Footer Global -->
-    <footer
-      class="fixed bottom-0 left-0 right-0 z-50 px-6 py-4 bg-black/40 backdrop-blur-md border-t border-white/5 flex justify-center items-center text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
-      <div class="flex flex-col items-center justify-center text-center gap-1">
-        <span class="hidden sm:inline opacity-50"
-          >JIRA · Ciberseguridad · IA Developer</span
-        >
-        <span class="text-white tracking-[0.3em]">Jose M Campos</span>
+    <footer class="site-footer relative z-10">
+      <div class="site-footer-inner">
+        <span>Jira Service Management · Ciberseguridad · IA</span>
+        <span>Jose Manuel Campos García</span>
       </div>
     </footer>
   </div>
@@ -163,27 +80,18 @@
 import { ref } from "vue";
 import { RouterView, RouterLink } from "vue-router";
 
+const navItems = [
+  { label: "Inicio", to: "/" },
+  { label: "Experiencia", to: "/experience" },
+  { label: "Proyectos", to: "/projects" },
+  { label: "Certificaciones", to: "/certifications" },
+  { label: "Skills", to: "/skills" },
+  { label: "Sobre mí", to: "/about" },
+];
+
 const menuOpen = ref(false);
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
 };
 </script>
-
-<style>
-/* Animaciones globales suaves */
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>

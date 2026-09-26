@@ -22,10 +22,19 @@
               Soy un profesional tecnológico enfocado en la eficiencia
               operativa, la seguridad y el desarrollo de soluciones escalables.
               Mi trayectoria combina la precisión técnica del desarrollo con una
-              sólida capacidad de gestión de procesos IT. Actualmente, desempeño
-              mi labor como Técnico de Administración de Jira Service Management
-              en <span class="text-white font-bold">Telefónica Tech</span>,
-              participando en proyectos críticos de Ciberseguridad.
+              sólida capacidad de gestión de procesos IT. Actualmente trabajo en
+              <span class="text-white font-bold">Telefónica Tech</span> como
+              <span class="text-white font-bold"
+                >Jira Administrator nivel 2</span
+              >
+              en un
+              <span class="text-white font-bold"
+                >equipo SOC de ciberseguridad</span
+              >. Gestiono <span class="text-gray-300">ticketing</span>,
+              superviso <span class="text-gray-300">SLAs</span> y optimizo
+              <span class="text-gray-300">workflows y automatizaciones</span>
+              para mejorar la trazabilidad y los tiempos de respuesta ante
+              incidencias.
             </p>
             <div
               class="space-y-4 text-gray-400 leading-relaxed text-base italic">
@@ -34,10 +43,10 @@
                 Desarrollo de Aplicaciones Web, habiendo consolidado mi
                 experiencia previa en consultoría tecnológica mediante el uso de
                 <span class="text-gray-300">Vue 3 y TypeScript</span>.
-                Actualmente compagino mi actividad profesional con formación
-                continua en inteligencia artificial y ciberseguridad, áreas en
-                las que profundizo con Google AI Essentials y la Certificación
-                Profesional en Ciberseguridad de Google.
+                Paralelamente, continúo formándome en
+                <span class="text-gray-300">ciberseguridad</span> e inteligencia
+                artificial, áreas en las que profundizo con Google AI Essentials
+                y la Certificación Profesional en Ciberseguridad de Google.
               </p>
               <p>
                 Antes de mi transición al sector IT, dediqué 16 años a la
