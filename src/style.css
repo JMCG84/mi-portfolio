@@ -259,6 +259,40 @@ main.site-main article > .absolute.inset-0 {
   display: none;
 }
 
+.site-main .contact-card {
+  background-color: rgba(25, 33, 28, 0.88);
+}
+
+.site-main .contact-card:hover,
+.site-main .contact-card:focus-visible {
+  border-color: rgba(115, 207, 226, 0.56);
+  background-color: rgba(25, 33, 28, 0.88);
+}
+
+.site-main .info-card {
+  background-color: rgba(25, 33, 28, 0.88);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.site-main .info-card:hover {
+  border-color: rgba(115, 207, 226, 0.38);
+  background-color: rgba(25, 33, 28, 0.88);
+}
+
+.site-main .contact-icon {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.site-main .contact-card:hover .contact-icon,
+.site-main .contact-card:focus-visible .contact-icon {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(115, 207, 226, 0.18);
+}
+
 main.site-main .text-blue-300,
 main.site-main .text-blue-400,
 main.site-main .text-blue-500 {
