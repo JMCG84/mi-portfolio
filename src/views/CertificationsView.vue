@@ -34,16 +34,6 @@ const certifications: Certification[] = [
   },
   {
     id: 3,
-    title: "Google IA Esencial",
-    company: "Google",
-    pdfLink: "/Google IA Esencial.pdf",
-    description:
-      "Especialización práctica sobre IA generativa, productividad asistida y aplicación de herramientas de inteligencia artificial en entornos profesionales y de trabajo diario.",
-    icon: "M12 3v1m6.364 1.636l-.707.707M21 12H3",
-    date: "2026-02-19",
-  },
-  {
-    id: 4,
     title: "Vue 3 de cero a experto",
     company: "Udemy",
     pdfLink: "/curso vue.js udemy.pdf",
@@ -53,7 +43,7 @@ const certifications: Certification[] = [
     date: "2026-01-29",
   },
   {
-    id: 5,
+    id: 4,
     title: "JavaScript Avanzado",
     company: "OpenWebinars",
     pdfLink: "/certificado_fundamentos_de_javascript.pdf",
@@ -63,7 +53,7 @@ const certifications: Certification[] = [
     date: "2026-01-29",
   },
   {
-    id: 6,
+    id: 5,
     title: "Fundamentos de Angular",
     company: "OpenWebinars",
     pdfLink: "/certificado_fundamentos_de_angular.pdf",
@@ -73,7 +63,7 @@ const certifications: Certification[] = [
     date: "2026-01-29",
   },
   {
-    id: 7,
+    id: 6,
     title: "PHP: Fundamentos",
     company: "OpenWebinars",
     pdfLink: "/certificado_php__fundamentos.pdf",
@@ -83,7 +73,7 @@ const certifications: Certification[] = [
     date: "2026-01-29",
   },
   {
-    id: 8,
+    id: 7,
     title: "Desarrollo Aumentado por IA",
     company: "Big School",
     pdfLink: "/Desarrollo con IA.pdf",
@@ -93,7 +83,7 @@ const certifications: Certification[] = [
     date: "2026-02-05",
   },
   {
-    id: 9,
+    id: 8,
     title: "Prompting Avanzado",
     company: "Google",
     pdfLink: "/Google _prompting.pdf",
@@ -103,7 +93,7 @@ const certifications: Certification[] = [
     date: "2026-02-12",
   },
   {
-    id: 10,
+    id: 9,
     title: "Instalación Aplicaciones",
     company: "Formación Profesional",
     pdfLink:
@@ -114,7 +104,7 @@ const certifications: Certification[] = [
     date: "2026-02-19",
   },
   {
-    id: 11,
+    id: 10,
     title: "Seguridad Informática",
     company: "Formación Profesional",
     pdfLink: "/Diploma de seguridad en equipos informaticos.pdf",
@@ -124,7 +114,7 @@ const certifications: Certification[] = [
     date: "2026-02-19",
   },
   {
-    id: 12,
+    id: 11,
     title: "Jira Service Management",
     company: "Atlassian",
     pdfLink: "/certificado jira service management.pdf",
@@ -134,7 +124,7 @@ const certifications: Certification[] = [
     date: "2026-04-06",
   },
   {
-    id: 13,
+    id: 12,
     title: "Make",
     company: "Make",
     pdfLink: "/certificado make.pdf",
@@ -147,6 +137,16 @@ const certifications: Certification[] = [
 
 const sortedCertifications = computed(() => {
   return [...certifications].sort((a, b) => {
+    const pinnedOrder = [1, 2];
+    const aPinnedIndex = pinnedOrder.indexOf(a.id);
+    const bPinnedIndex = pinnedOrder.indexOf(b.id);
+
+    if (aPinnedIndex !== -1 || bPinnedIndex !== -1) {
+      if (aPinnedIndex === -1) return 1;
+      if (bPinnedIndex === -1) return -1;
+      return aPinnedIndex - bPinnedIndex;
+    }
+
     return new Date(b.date ?? 0).getTime() - new Date(a.date ?? 0).getTime();
   });
 });
@@ -195,9 +195,28 @@ const sortedCertifications = computed(() => {
                 class="text-xl font-bold text-gray-200 group-hover:text-blue-300 transition-colors line-clamp-2 uppercase leading-tight">
                 {{ cert.title }}
               </h3>
-              <p
-                class="text-sm font-medium text-gray-400 uppercase tracking-widest mt-1">
-                {{ cert.company }}
+              <p class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+                <span
+                  v-if="cert.id === 1 || cert.id === 2"
+                  class="text-base font-bold normal-case tracking-normal"
+                  aria-label="Google">
+                  <span class="text-[#4285F4]">G</span
+                  ><span class="text-[#EA4335]">o</span
+                  ><span class="text-[#FBBC05]">o</span
+                  ><span class="text-[#4285F4]">g</span
+                  ><span class="text-[#34A853]">l</span
+                  ><span class="text-[#EA4335]">e</span>
+                </span>
+                <span
+                  v-else
+                  class="text-sm font-medium text-gray-400 uppercase tracking-widest">
+                  {{ cert.company }}
+                </span>
+                <span
+                  v-if="cert.id === 1 || cert.id === 2"
+                  class="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+                  Certificado oficial
+                </span>
               </p>
               <p
                 v-if="cert.description"

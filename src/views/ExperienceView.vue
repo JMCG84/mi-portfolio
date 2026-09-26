@@ -27,7 +27,8 @@
                   src="/tech_logo.jpeg"
                   alt="Logo Telefonica Tech"
                   class="h-10 w-auto object-contain" />
-                <p class="text-sm font-semibold uppercase tracking-widest text-gray-400">
+                <p
+                  class="text-sm font-semibold uppercase tracking-widest text-gray-400">
                   Telefónica Tech
                 </p>
               </div>
@@ -35,7 +36,8 @@
                 <h3 class="text-2xl font-bold text-gray-100">
                   Tecnico de Administracion de Jira Service Management
                 </h3>
-                <p class="text-sm font-semibold uppercase tracking-widest text-gray-400 mt-1">
+                <p
+                  class="text-sm font-semibold uppercase tracking-widest text-gray-400 mt-1">
                   Proyecto de Ciberseguridad
                 </p>
               </div>
@@ -61,7 +63,8 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="p-4 rounded-2xl bg-black/20 border border-white/10">
-              <h4 class="text-sm font-bold uppercase tracking-widest text-blue-300 mb-2">
+              <h4
+                class="text-sm font-bold uppercase tracking-widest text-blue-300 mb-2">
                 Administracion de ITSM
               </h4>
               <p class="text-sm text-gray-400 leading-relaxed">
@@ -71,17 +74,18 @@
               </p>
             </div>
             <div class="p-4 rounded-2xl bg-black/20 border border-white/10">
-              <h4 class="text-sm font-bold uppercase tracking-widest text-blue-300 mb-2">
+              <h4
+                class="text-sm font-bold uppercase tracking-widest text-blue-300 mb-2">
                 Optimizacion de Procesos
               </h4>
               <p class="text-sm text-gray-400 leading-relaxed">
-                Diseno e implementacion de automatizaciones para reducir
-                tiempos de respuesta en peticiones tecnicas y alertas de
-                seguridad.
+                Diseno e implementacion de automatizaciones para reducir tiempos
+                de respuesta en peticiones tecnicas y alertas de seguridad.
               </p>
             </div>
             <div class="p-4 rounded-2xl bg-black/20 border border-white/10">
-              <h4 class="text-sm font-bold uppercase tracking-widest text-blue-300 mb-2">
+              <h4
+                class="text-sm font-bold uppercase tracking-widest text-blue-300 mb-2">
                 Gestion de SLAs
               </h4>
               <p class="text-sm text-gray-400 leading-relaxed">
@@ -91,7 +95,8 @@
               </p>
             </div>
             <div class="p-4 rounded-2xl bg-black/20 border border-white/10">
-              <h4 class="text-sm font-bold uppercase tracking-widest text-blue-300 mb-2">
+              <h4
+                class="text-sm font-bold uppercase tracking-widest text-blue-300 mb-2">
                 Colaboracion en Ciberseguridad
               </h4>
               <p class="text-sm text-gray-400 leading-relaxed">
@@ -100,7 +105,6 @@
               </p>
             </div>
           </div>
-
         </div>
         <div
           class="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
@@ -117,12 +121,14 @@
                   src="/alten_logo.png"
                   alt="Logo Alten Spain"
                   class="h-10 w-auto object-contain" />
-                <p class="text-sm font-semibold uppercase tracking-widest text-gray-400">
+                <p
+                  class="text-sm font-semibold uppercase tracking-widest text-gray-400">
                   Alten Spain
                 </p>
               </div>
               <h3 class="text-2xl font-bold text-gray-100">ALTEN Spain</h3>
-              <p class="text-sm font-semibold uppercase tracking-widest text-gray-400 mt-1">
+              <p
+                class="text-sm font-semibold uppercase tracking-widest text-gray-400 mt-1">
                 Frontend Developer · Etapa de formacion practica / Consultoria
               </p>
             </div>
@@ -132,8 +138,8 @@
           </div>
 
           <p class="text-base md:text-lg text-gray-300 leading-relaxed">
-            Desarrollo de interfaces de usuario modernas y escalables,
-            enfocadas en la experiencia de usuario y el rendimiento tecnico.
+            Desarrollo de interfaces de usuario modernas y escalables, enfocadas
+            en la experiencia de usuario y el rendimiento tecnico.
           </p>
 
           <ul class="space-y-3 text-gray-400 text-sm leading-relaxed">
@@ -148,8 +154,8 @@
               <span class="text-blue-300 font-semibold">
                 Arquitecturas Modernas:
               </span>
-              Uso de Vite y Tailwind CSS para el desarrollo agil de
-              aplicaciones web.
+              Uso de Vite y Tailwind CSS para el desarrollo agil de aplicaciones
+              web.
             </li>
             <li>
               <span class="text-blue-300 font-semibold">
@@ -164,5 +170,24 @@
           class="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
       </article>
     </section>
+
+    <div class="flex justify-center pt-8">
+      <RouterLink
+        to="/"
+        class="px-8 py-4 bg-gradient-to-r from-blue-700 to-blue-600 text-white rounded-full font-bold hover:from-blue-600 hover:to-blue-500 transition-all transform hover:scale-105 shadow-lg flex items-center gap-3">
+        <svg
+          class="w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2.5"
+            d="M15 18l-6-6 6-6" />
+        </svg>
+        <span>Volver al inicio</span>
+      </RouterLink>
+    </div>
   </div>
 </template>
