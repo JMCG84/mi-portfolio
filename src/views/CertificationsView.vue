@@ -9,7 +9,7 @@ type Certification = {
   icon: string;
   description?: string;
   inProgress?: boolean;
-  date: string;
+  date?: string;
 };
 
 const certifications: Certification[] = [
@@ -25,13 +25,12 @@ const certifications: Certification[] = [
   },
   {
     id: 2,
-    title: "Especialización en Desarrollo SAP ABAP Cloud",
-    company: "Experis Espana | En curso",
+    title: "Google AI Essentials (5 cursos)",
+    company: "Google",
+    pdfLink: "/Google AI Essentials (5 cursos).pdf",
     description:
-      "Programa intensivo enfocado en las nuevas arquitecturas de SAP en BTP, con formación en RAP, servicios OData, CDS y extensibilidad en la nube para soluciones empresariales modernas.",
-    inProgress: true,
-    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
-    date: "2026-05-12",
+      "Programa Google AI Essentials compuesto por cinco cursos sobre fundamentos y aplicaciones de inteligencia artificial.",
+    icon: "M12 3v1m6.364 1.636l-.707.707M21 12H3",
   },
   {
     id: 3,
@@ -148,7 +147,7 @@ const certifications: Certification[] = [
 
 const sortedCertifications = computed(() => {
   return [...certifications].sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
+    return new Date(b.date ?? 0).getTime() - new Date(a.date ?? 0).getTime();
   });
 });
 </script>

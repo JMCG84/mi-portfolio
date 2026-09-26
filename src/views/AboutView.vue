@@ -33,11 +33,11 @@
                 Cuento con una base técnica sólida como Técnico Superior en
                 Desarrollo de Aplicaciones Web, habiendo consolidado mi
                 experiencia previa en consultoría tecnológica mediante el uso de
-                <span class="text-gray-300">Vue 3 y TypeScript</span>. En mi
-                compromiso con la especialización constante, actualmente
-                compagino mi actividad profesional con una doble formación de
-                alto nivel: el desarrollo en el ecosistema SAP BTP (ABAP Cloud /
-                RAP) y la Certificación Profesional en Ciberseguridad de Google.
+                <span class="text-gray-300">Vue 3 y TypeScript</span>.
+                Actualmente compagino mi actividad profesional con formación
+                continua en inteligencia artificial y ciberseguridad, áreas en
+                las que profundizo con Google AI Essentials y la Certificación
+                Profesional en Ciberseguridad de Google.
               </p>
               <p>
                 Antes de mi transición al sector IT, dediqué 16 años a la
